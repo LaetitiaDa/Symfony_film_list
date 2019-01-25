@@ -1,0 +1,32 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+app_register:
+  path: /user/register
+  controller: App\Controller\UserController::register
+
+app_login:
+  path: /user/login
+  controller: App\Controller\UserController::login
+
+app_search:
+  path: /search/search
+  controller: App\Controller\SearchController::search
+
+app_detail:
+  path: /search/detail
+  controller: App\Controller\SearchController::detail
+
+app_favorite:
+  path: /favorite/favorite
+  controller: App\Controller\FavoriteController::favorite
+
+app_favoritelist:
+  path: /favorite/favoritelist
+  controller: App\Controller\FavoriteController::favoritelist
+
+app_delete:
+  path: /favorite/delete
+  controller: App\Controller\FavoriteController::delete

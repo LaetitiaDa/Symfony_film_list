@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Film Search</a>
+            </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/search/search">Home</a></li>
+            <li><a href="/favorite/favoritelist">My Favorites</a></li>
+            <li><a href="/user/login">Login</a></li>
+            <li><a href="/user/register">Register</a></li>
+        </ul>
+        </div>
+    </nav>
+        
+        <p>The film has been added to your favorite list.</p>
+        <p>You can see the list <a href='/favorite/favoritelist'>here</a> !</p>
+        
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

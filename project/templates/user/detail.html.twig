@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+        <title>{% block title %}Film details{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Film Search</a>
+            </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/search/search">Home</a></li>
+            <li><a href="/user/login">Login</a></li>
+            <li><a href="/user/register">Register</a></li>
+        </ul>
+        </div>
+    </nav>
+
+    <a href='/search/search' class="btn btn-default">Back to search</a>
+
+        <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src={{response.Poster}} />   
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>Title</td>
+                                    <td>{{response.Title}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Year</td>
+                                    <td>{{response.Year}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Rated</td>
+                                    <td>{{response.Rated}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Released</td>
+                                    <td>{{response.Released}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Runtime</td>
+                                    <td>{{response.Runtime}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Genre</td>
+                                    <td>{{response.Genre}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Director</td>
+                                    <td>{{response.Director}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Actors</td>
+                                    <td>{{response.Actors}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Country</td>
+                                    <td>{{response.Country}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Plot</td>
+                                    <td>{{response.Plot}}</td>
+                                </tr>
+                                <tr>
+                                    <td><a href='' class="btn btn-default">Add to Favorite</a></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div> 
+                    </div>
+                </div>
+            </div><br>
+
+
+
+        
+        
+
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

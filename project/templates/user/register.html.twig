@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+        <title>{% block title %}Register{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Film Search</a>
+            </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/search/search">Home</a></li>
+            <li><a href="/favorite/favoritelist">My Favorites</a></li>
+            <li><a href="/user/login">Login</a></li>
+            <li><a href="/user/register">Register</a></li>
+        </ul>
+        </div>
+    </nav>
+
+            
+            <form method="post">
+                
+                <div class="container">
+                <h1>Register</h1>
+                    <label>User Name</label> <input name="name" type="text" class="form-control my-0 py-1"/><br>
+                    <label>Email</label> <input name="email" type="text" class="form-control my-0 py-1"/><br>
+                    <label>Password</label> <input name="password" type="password" class="form-control my-0 py-1"/><br>
+                    <label>Password Confirmation</label> <input name="password_conf" type="password" class="form-control my-0 py-1"/><br>
+                    <button name="submit" type="submit" class="btn btn-dark">Register</button>
+                    {{ error }}
+                </div>
+            </form>
+
+            
+
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
